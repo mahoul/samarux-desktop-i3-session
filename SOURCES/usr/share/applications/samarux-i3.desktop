@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=samarux-i3
+NoDisplay=true
+Comment=Samarux i3 session script
+Exec=samarux-i3
+X-GNOME-WMName=samarux-i3
+X-GNOME-Autostart-Phase=WindowManager
+X-GNOME-Provides=windowmanager
+X-GNOME-Autostart-Notify=false

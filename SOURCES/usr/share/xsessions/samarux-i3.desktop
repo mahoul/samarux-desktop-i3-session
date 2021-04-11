@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=samarux-i3
+Comment=Samarux i3 desktop session
+Exec=samarux-session
+TryExec=i3
+Type=XSession
