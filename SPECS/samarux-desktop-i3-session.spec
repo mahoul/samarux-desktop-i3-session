@@ -1,6 +1,6 @@
 Name:           samarux-desktop-i3-session
 Version:        0.1
-Release:        13
+Release:        14
 Summary:        samarux-desktop-i3-session session files for i3 + gnome subsystem via gnome-flashback
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -18,8 +18,9 @@ from the awesome Regolith project (https://regolith-linux.org/)
 
 
 %prep
-[ -d %{name} ] && rm -Rfv %{name}
-[ -d %{_topdir}/SOURCES ] && rsync -avP --exclude '.git' --delete %{_topdir}/SOURCES/ .
+#[ -d %{name} ] && rm -Rfv %{name}
+#[ -d %{_topdir}/SOURCES ] && rsync -avP --exclude '.git' --delete %{_topdir}/SOURCES/ .
+%autosetup
 
 
 %install
@@ -43,6 +44,9 @@ from the awesome Regolith project (https://regolith-linux.org/)
 /usr/share/xsessions/samarux-i3.desktop
 
 %changelog
+* Sun Apr 11 2021 Enrique Gil <mahoul@gmail.com> - 0.1-14
+- Replaced prep section with autosetup
+
 * Sun Apr 11 2021 Enrique Gil (mahoul@gmail.com) - 0.1-13
 - Renamed pkg to samarux-desktop-i3-session and src files too
 
