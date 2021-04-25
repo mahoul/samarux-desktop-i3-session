@@ -5,6 +5,11 @@ test -n "$DESKTOP_AUTOSTART_ID" && {
     dbus-send --print-reply --session --dest=org.gnome.SessionManager "/org/gnome/SessionManager" org.gnome.SessionManager.RegisterClient "string:samarux-i3" "string:$DESKTOP_AUTOSTART_ID"
 }
 
+if [ ! -f ~/.samarux_configured ]; then
+	cp -fr /etc/skel/.config $HOME/
+	touch ~/.samarux_configured
+fi
+
 i3
 
 # Logout process.
